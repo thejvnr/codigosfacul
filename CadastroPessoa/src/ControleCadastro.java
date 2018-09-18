@@ -34,7 +34,7 @@ public class ControleCadastro {
 				viewCadastro.pesquisar(agenda);
 				break;
 			case 0:
-				System.out.println("Até a próxima!");
+				viewCadastro.sair();
 				continuar = false;
 				break;
 			default:

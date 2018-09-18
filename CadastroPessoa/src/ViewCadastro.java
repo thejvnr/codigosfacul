@@ -98,8 +98,14 @@ public class ViewCadastro {
 	}
 	public void pesquisar(ArrayList<Pessoa> agenda) {
 			System.out.println("Insira o nome que deseja buscar: ");
-			List<Pessoa> retornaPesquisa = agenda.stream().filter(a -> a.getNome().equalsIgnoreCase(teclado.nextLine())).collect(Collectors.toList());
-			retornaPesquisa.forEach(a -> System.out.println("\n" + a.getNome()));
+			String search = teclado.nextLine();
+			List<Pessoa> retornaPesquisa = agenda.stream().filter(a -> a.getNome().equalsIgnoreCase(search)).collect(Collectors.toList());
+			retornaPesquisa.forEach(a -> System.out.println("\n" + a.getNome() + " " + a.getEmail() + " " + a.getFone()));
+	}
+	
+	public void sair() {
+		System.out.println("Até a próxima!");
+		System.exit(1);
 	}
 
 }
